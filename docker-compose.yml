@@ -8,6 +8,16 @@ services:
       - "80:80"
     networks:
       - wtp_net
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+  certbot:
+    build: ./certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot/.well-known/acme-challenge
 networks: 
   wtp_net:
     name: wtp_net
+volumes:
+  certificates:
