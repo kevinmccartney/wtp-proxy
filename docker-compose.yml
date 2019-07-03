@@ -1,7 +1,13 @@
-version: '3'
+version: '3.5'
 
 services:
-  nginx:
+  nginx_proxy:
+    container_name: wtp_nginx_proxy
     build: ./nginx
     ports:
       - "80:80"
+    networks:
+      - wtp_net
+networks: 
+  wtp_net:
+    name: wtp_net
