@@ -16,7 +16,6 @@ services:
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-      - certs:/etc/letsencrypt
     depends_on:
       - nginx_proxy
 networks: 
