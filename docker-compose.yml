@@ -15,9 +15,7 @@ services:
     build: ./certbot
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot/.well-known/acme-challenge
+      - ./data/certbot/www:/var/www/certbot
 networks: 
   wtp_net:
     name: wtp_net
-volumes:
-  certificates:
