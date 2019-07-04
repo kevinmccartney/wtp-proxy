@@ -8,5 +8,3 @@ RUN add-apt-repository ppa:certbot/certbot -y
 RUN apt-get update -y
 
 RUN apt-get install certbot -y
-
-COPY /certbot/init.sh /root
