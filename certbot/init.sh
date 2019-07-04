@@ -5,6 +5,6 @@ docker run -dit --volume=wtp-proxy_certs_data:/etc/letsencrypt --name=cert_conta
 
 docker cp cert_container:/etc/letsencrypt ../certificates
 
-$container=(docker -aqf "name=cert_container")
+$container=("docker -aqf 'name=cert_container'")
 
 docker stop $container
