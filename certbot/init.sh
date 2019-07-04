@@ -9,7 +9,7 @@
 
 # docker cp cert_container:/etc/letsencrypt $DIR/../certificates
 
-container=(docker ps -aqf "name=cert_container")
+container=("docker ps -aqf 'name=cert_container'")
 
 echo $container
 
