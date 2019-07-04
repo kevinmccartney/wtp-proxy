@@ -1,0 +1,1 @@
+certbot certonly --webroot --dry-run -w /var/www/certbot -d api.wethe.party

@@ -18,6 +18,7 @@ services:
       - ./data/certbot/www:/var/www/certbot
     depends_on:
       - nginx_proxy
+    command: './install.sh'
 networks: 
   wtp_net:
     name: wtp_net
