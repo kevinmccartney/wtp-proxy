@@ -12,10 +12,18 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
   certbot:
-    build: ./certbot
+    build: 
+      context: ./certbot
+      args:
+        domains:
+          - 'api.wethe.party'
+          - 'www.wethe.party'
+          - 'wethe.party'
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
+    depends_on:
+      - nginx_proxy
 networks: 
   wtp_net:
     name: wtp_net
