@@ -9,8 +9,9 @@ services:
     networks:
       - wtp_net
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - cert_data:/ect/letsencrypt
 networks: 
   wtp_net:
     name: wtp_net
+volumes:
+  certs_data:
