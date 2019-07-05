@@ -9,7 +9,7 @@ services:
     networks:
       - wtp_net
     volumes:
-      - /etc/letsencrypt:certs_data/
+      - certs_data:/etc/letsencrypt
 networks: 
   wtp_net:
     name: wtp_net
