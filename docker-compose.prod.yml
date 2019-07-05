@@ -9,8 +9,8 @@ services:
       - "443:443"
     networks:
       - wtp_net
-    # volumes:
-    #   - certs_data:/etc/letsencrypt
+    volumes:
+      - certs_data:/etc/letsencrypt
 networks: 
   wtp_net:
     name: wtp_net
