@@ -10,3 +10,6 @@ This repo must be on the host machine running the container - use git or docker-
 + Figure out better Docker strategy for cert requesting, verifying, & updating
 + Figure out bootstrapping strategy
     + https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
++ Add the certbot defaults
+    + https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf
+    + https://raw.githubusercontent.com/certbot/certbot/master/certbot/ssl-dhparams.pem
