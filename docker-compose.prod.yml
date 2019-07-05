@@ -9,7 +9,7 @@ services:
     networks:
       - wtp_net
     volumes:
-      - cert_data:/ect/letsencrypt
+      - certs_data:/ect/letsencrypt
 networks: 
   wtp_net:
     name: wtp_net
